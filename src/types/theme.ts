@@ -18,3 +18,8 @@ export enum BP {
   xl = Breakpoint.xl,
   xxl = Breakpoint.xxl,
 }
+
+export enum BoxShadow {
+  sm = 'box-shadow: 0 2px 8px -1px #05000076;',
+  md = 'box-shadow: 0 5px 10px -1px #05000076;',
+}

@@ -30,6 +30,7 @@ const GET_SHOWS = gql`
 
 const Container = styled.div`
   display: flex;
+  gap: 4rem;
   max-height: 100%;
   overflow-y: auto;
 `;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { Show } from 'types/show';
-import { Color } from 'types/theme';
+import { BoxShadow, Color } from 'types/theme';
 
 const Container = styled.div`
   display: flex;
@@ -10,11 +10,11 @@ const Container = styled.div`
   border-radius: 1rem;
   /* background-color: ${Color.secondary}; */
   &:hover {
-    box-shadow: 0 5px 10px -1px #05000076;
+    ${BoxShadow.md}
     transform: scale(1.05, 1.05);
     cursor: pointer;
     & > img {
-      box-shadow: 0 2px 8px -1px #05000076;
+      ${BoxShadow.sm};
     }
   }
   transition: all 0.1s ease-out;
@@ -25,7 +25,7 @@ const Img = styled.img`
   /* height: 120px; */
   overflow: hidden;
   object-fit: cover;
-  box-shadow: 0 5px 10px -1px #0500006e;
+  ${BoxShadow.md}
 `;
 
 const Name = styled.span`
