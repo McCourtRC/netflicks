@@ -14,9 +14,7 @@ function App() {
   return (
     <Container className='App'>
       <Header />
-      <LeftNav>
-        <Shows />
-      </LeftNav>
+      <Shows />
     </Container>
   );
 }

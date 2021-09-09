@@ -1,6 +1,8 @@
 import { useQuery, gql } from '@apollo/client';
 import styled from '@emotion/styled';
 import ShowItem from 'components/ShowItem';
+import ShowList from 'components/ShowList';
+import LeftNav from 'lib/LeftNav';
 import { nth } from 'ramda';
 import React, { Fragment } from 'react';
 import { Show } from 'types/show';
@@ -34,22 +36,14 @@ const Shows = () => {
   if (loading) return <div>loading...</div>;
 
   const selectItem = (index: number) => {
-    const item = nth(index, shows);
-    console.log('');
+    const item = nth(index, shows || []);
+    console.log('Selected', item?.name);
   };
 
   return (
-    <Fragment>
-      {shows?.map((show, index) => {
-        return (
-          <ShowItem
-            key={show._id}
-            show={show}
-            onClick={() => selectItem(index)}
-          />
-        );
-      })}
-    </Fragment>
+    <LeftNav>
+      <ShowList shows={shows ?? []} onSelect={selectItem} />
+    </LeftNav>
   );
 };
 
