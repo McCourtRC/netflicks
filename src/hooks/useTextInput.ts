@@ -1,18 +1,18 @@
 import { ChangeEventHandler, useState } from 'react';
 
 const useTextInput = (
-  initialValue = ''
+  initialVal = ''
 ): [
   value: string,
-  onChangeValue: ChangeEventHandler,
+  onChangeValue: ChangeEventHandler<HTMLInputElement>,
   resetValue: () => void
 ] => {
-  const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState(initialVal);
 
   const onChangeValue: ChangeEventHandler<HTMLInputElement> = (e) =>
     setValue(e.target.value);
 
-  const resetValue = () => setValue(initialValue);
+  const resetValue = () => setValue(initialVal);
 
   return [value, onChangeValue, resetValue];
 };
