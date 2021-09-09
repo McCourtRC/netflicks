@@ -1,7 +1,6 @@
 export enum Color {
-  primary = '#E50914',
-  secondary = 'lightblue',
-  black = '#221f1f',
+  primary = '#dff0ff',
+  secondary = '#2a353f',
 }
 
 export enum Breakpoint {
