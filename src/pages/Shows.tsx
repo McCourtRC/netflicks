@@ -1,9 +1,9 @@
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import styled from '@emotion/styled';
+import { nth } from 'ramda';
 import ShowForm from 'components/ShowForm';
 import ShowList from 'components/ShowList';
-import { nth } from 'ramda';
-import React from 'react';
 import { Show } from 'types/show';
 
 interface Data {
