@@ -7,11 +7,10 @@ import { nth } from 'ramda';
 import React, { Fragment } from 'react';
 import { Show } from 'types/show';
 
-interface AllShows {
-  allShows: ShowsData;
-}
-interface ShowsData {
-  data: Show[];
+interface Data {
+  allShows: {
+    data: Show[];
+  };
 }
 
 const GET_SHOWS = gql`
@@ -36,7 +35,7 @@ const Container = styled.div`
 `;
 
 const Shows = () => {
-  const { data, loading, error } = useQuery<AllShows>(GET_SHOWS);
+  const { data, loading, error } = useQuery<Data>(GET_SHOWS);
   const shows = data?.allShows.data;
 
   if (error) return <div>{error}</div>;
