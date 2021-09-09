@@ -1,0 +1,23 @@
+type Show @collection(name: "Shows") {
+  name: String!
+  asset: Asset!
+  likes: Int!
+  viewed: Int!
+  previewable: Boolean!
+  episodes: [Show!]!
+  categories: [Categories!]!
+}
+
+type Asset @embedded {
+  url: String!
+  image: String!
+}
+
+type Categories {
+  name: String!
+}
+
+type Query {
+  allCategories: [Categories!]!
+  allShows: [Show!]!
+}
