@@ -1,5 +1,5 @@
 import React from 'react';
-import LeftNav from 'lib/LeftNav';
+import LeftNav from 'components/LeftNav';
 import { Show } from 'types/show';
 import ShowItem from './ShowItem';
 
