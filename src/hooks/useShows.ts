@@ -23,7 +23,7 @@ const GET_SHOWS = gql`
 
 const useShows = () => {
   const { data, ...rest } = useQuery<Data>(GET_SHOWS);
-  const shows = data?.allShows.data;
+  const shows = data?.allShows.data ?? [];
 
   return { shows, ...rest };
 };

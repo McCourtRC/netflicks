@@ -19,13 +19,13 @@ const Shows = () => {
   if (loading) return <div>loading...</div>;
 
   const selectItem = (index: number) => {
-    const item = nth(index, shows || []);
+    const item = nth(index, shows);
     console.log('Selected', item?.name);
   };
 
   return (
     <Container>
-      <ShowList shows={shows ?? []} onSelect={selectItem} />
+      <ShowList shows={shows} onSelect={selectItem} />
       <ShowForm />
     </Container>
   );
