@@ -1,5 +1,9 @@
 import { useQuery, gql } from '@apollo/client';
-import React from 'react';
+import styled from '@emotion/styled';
+import ShowItem from 'components/ShowItem';
+import { nth } from 'ramda';
+import React, { Fragment } from 'react';
+import { Show } from 'types/show';
 
 interface AllShows {
   allShows: ShowsData;
@@ -8,17 +12,15 @@ interface ShowsData {
   data: Show[];
 }
 
-interface Show {
-  _id: string;
-  name: string;
-}
-
 const GET_SHOWS = gql`
   {
     allShows {
       data {
         _id
         name
+        asset {
+          image
+        }
       }
     }
   }
@@ -31,12 +33,23 @@ const Shows = () => {
   if (error) return <div>{error}</div>;
   if (loading) return <div>loading...</div>;
 
+  const selectItem = (index: number) => {
+    const item = nth(index, shows);
+    console.log('');
+  };
+
   return (
-    <div>
-      {shows?.map((show) => {
-        return <div key={show._id}>{show.name}</div>;
+    <Fragment>
+      {shows?.map((show, index) => {
+        return (
+          <ShowItem
+            key={show._id}
+            show={show}
+            onClick={() => selectItem(index)}
+          />
+        );
       })}
-    </div>
+    </Fragment>
   );
 };
 
