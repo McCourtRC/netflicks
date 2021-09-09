@@ -2,36 +2,18 @@ import React, { FormEvent, FormEventHandler } from 'react';
 import useHandleSubmit from 'hooks/useHandleSubmit';
 import useTextInput from 'hooks/useTextInput';
 import styled from '@emotion/styled';
-import { BoxShadow, Color } from 'types/theme';
+import Input from 'lib/Input';
+import Submit from 'lib/Submit';
 
 const Container = styled.div`
   flex: 1;
-`;
-
-const Input = styled.input`
-  display: block;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: large;
-  border: none;
-  border-radius: 5px;
-  width: 50%;
-`;
-
-const Submit = styled.input`
-  border: none;
-  border-radius: 5px;
-  padding: 1rem;
-  color: white;
-  font-weight: bold;
-  background-color: ${Color.secondary};
 `;
 
 const ShowForm = () => {
   const [title, onChangeTitle, resetTitle] = useTextInput();
   const [img, onChangeImg, resetImg] = useTextInput();
   const handleSubmit = useHandleSubmit(() => {
-    console.log('HELLO');
+    console.log('Createing New Show', title, img);
     // submit mutation
     resetTitle();
     resetImg();
