@@ -1,8 +1,8 @@
 import { useQuery, gql } from '@apollo/client';
 import styled from '@emotion/styled';
+import ShowForm from 'components/ShowForm';
 import ShowItem from 'components/ShowItem';
 import ShowList from 'components/ShowList';
-import LeftNav from 'lib/LeftNav';
 import { nth } from 'ramda';
 import React, { Fragment } from 'react';
 import { Show } from 'types/show';
@@ -28,6 +28,12 @@ const GET_SHOWS = gql`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  max-height: 100%;
+  overflow-y: auto;
+`;
+
 const Shows = () => {
   const { data, loading, error } = useQuery<AllShows>(GET_SHOWS);
   const shows = data?.allShows.data;
@@ -41,9 +47,10 @@ const Shows = () => {
   };
 
   return (
-    <LeftNav>
+    <Container>
       <ShowList shows={shows ?? []} onSelect={selectItem} />
-    </LeftNav>
+      <ShowForm />
+    </Container>
   );
 };
 

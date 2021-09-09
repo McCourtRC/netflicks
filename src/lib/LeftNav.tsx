@@ -5,7 +5,7 @@ import { Color } from 'types/theme';
 const Container = styled.div`
   padding: 1rem;
   width: 250px;
-  height: 100%;
+  max-height: 100%;
   overflow-y: auto;
   /* Hide scrollbar for Chrome, Safari and Opera */
   ::-webkit-scrollbar {

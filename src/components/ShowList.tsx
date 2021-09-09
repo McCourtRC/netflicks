@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import LeftNav from 'lib/LeftNav';
 import { Show } from 'types/show';
 import ShowItem from './ShowItem';
 
@@ -9,7 +10,7 @@ interface Props {
 
 const ShowList = ({ shows, onSelect }: Props) => {
   return (
-    <Fragment>
+    <LeftNav>
       {shows.map((show, index) => {
         return (
           <ShowItem
@@ -19,7 +20,7 @@ const ShowList = ({ shows, onSelect }: Props) => {
           />
         );
       })}
-    </Fragment>
+    </LeftNav>
   );
 };
 
