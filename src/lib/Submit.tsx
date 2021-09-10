@@ -8,6 +8,7 @@ const Submit = styled.input`
   color: white;
   font-weight: bold;
   background-color: ${Color.secondary};
+  cursor: pointer;
 `;
 
 export default Submit;
