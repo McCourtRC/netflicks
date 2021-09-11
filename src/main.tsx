@@ -15,12 +15,12 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <ReduxProvider store={store}>
-    <ApolloProvider client={client}>
-      <React.StrictMode>
+  <React.StrictMode>
+    <ReduxProvider store={store}>
+      <ApolloProvider client={client}>
         <App />
-      </React.StrictMode>
-    </ApolloProvider>
-  </ReduxProvider>,
+      </ApolloProvider>
+    </ReduxProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
