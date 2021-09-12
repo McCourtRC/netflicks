@@ -12,6 +12,7 @@ const Container = styled.div`
 const ShowForm = () => {
   const [title, onChangeTitle, resetTitle] = useTextInput();
   const [img, onChangeImg, resetImg] = useTextInput();
+
   const handleSubmit = useHandleSubmit(() => {
     console.log('Createing New Show', title, img);
     // submit mutation
