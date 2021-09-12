@@ -19,8 +19,8 @@ const Shows = () => {
   if (loading) return <div>loading...</div>;
 
   const selectItem = (index: number) => {
-    const item = nth(index, shows);
-    console.log('Selected', item?.name);
+    const item = shows[index];
+    console.log('Selected', item.name);
   };
 
   return (
