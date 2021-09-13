@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { nth } from 'ramda';
 import ShowForm from 'components/ShowForm';
 import ShowList from 'components/ShowList';
 import useShows from 'hooks/useShows';
