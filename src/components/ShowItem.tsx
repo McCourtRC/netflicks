@@ -29,11 +29,9 @@ const Img = styled.img`
 `;
 
 const Name = styled.span`
-  font-family: 'Urbanist';
   font-size: large;
-  font-weight: bold;
   padding: 0.5rem 1rem;
-  color: ${Color.secondary};
+  color: ${Color.white};
 `;
 
 interface Props {

@@ -5,9 +5,9 @@ const Submit = styled.input`
   border: none;
   border-radius: 5px;
   padding: 1rem;
-  color: white;
+  color: ${Color.white};
   font-weight: bold;
-  background-color: ${Color.secondary};
+  background-color: ${Color.primary};
   cursor: pointer;
 `;
 

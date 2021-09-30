@@ -9,11 +9,16 @@ const Container = styled.header`
 `;
 
 const Logo = styled.h1`
-  /* font-family: 'Urbanist'; */
   font-weight: bold;
+  font-size: large;
   margin: 0;
-  padding: 1rem;
-  color: ${Color.secondary};
+  padding: 1rem 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0)
+  );
+  color: ${Color.primary};
 `;
 
 const Header = () => {

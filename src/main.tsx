@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from 'store';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 
 const client = new ApolloClient({
