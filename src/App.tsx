@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'components/Header';
 import styled from '@emotion/styled';
-import Shows from 'pages/Shows';
+import Router from 'Router';
 
 const Container = styled.div`
   display: flex;
@@ -11,9 +11,9 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container className='App'>
+    <Container>
       <Header />
-      <Shows />
+      <Router />
     </Container>
   );
 }
